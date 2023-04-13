@@ -1,0 +1,238 @@
+.image-container {
+  position: relative;
+}
+
+.text-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 5%;
+  left: 50px;
+  width: calc(100% - 100px);
+}
+
+.text1 {
+  cursor: pointer;
+  font-size: x-large;
+  margin-left: 20px;
+  color: white;
+}
+
+.text2 {
+  cursor: pointer;
+  font-size: x-large;
+  margin-left: 50%;
+  color: white;
+}
+
+.text3 {
+  cursor: pointer;
+  font-size: x-large;
+  color: white;
+}
+.text-container1 {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  width: 23%;
+}
+.t2 {
+  color: white;
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 1100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.t2 {
+  color: white;
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 1100%;
+  left: 50%;
+  margin-top: 42px;
+  transform: translate(-50%, 50%);
+}
+.t3 {
+  color: white;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 1350%;
+  left: 50%;
+  margin-top: 39px;
+  transform: translate(-50%, 50%);
+}
+
+button {
+  padding: 8px;
+  border: 10px;
+  background-color: orange;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0 auto;
+  position: absolute;
+  top: 1400%;
+  left: 50%;
+  transform: translate(-50%, 110%);
+  margin-top: 45px;
+  font-weight: bold;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  margin-top: 30px;
+  background-color: #D18575;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 0 auto; /* centers the card horizontally */
+  width: 1200px;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  flex: 1;
+}
+.basic-info {
+  padding: 2px 16px;
+  flex: 1; /* Make the container flex item grow to fill the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+.basic-info h1 {
+  margin-top: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.p1 {
+  font-size: 17px;
+  margin-top: -5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.p2 {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1class {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.h1class2 {
+  align-items: flex-start;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Professional{
+    text-align: center;
+    margin-top: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.card1 {
+  /* Add shadows to create the "card" effect */
+  margin-top: 30px;
+  background-color: #D18575;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 0 auto; /* centers the card horizontally */
+  width: 1200px;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container1 {
+  padding: 2px 16px;
+  flex: 1;
+  display: flex;
+}
+
+.left-skills, .right-skills {
+  flex: 1;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  margin-top: 25px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.skill p {
+  margin-right: 20px;
+}
+.imgclass{
+    align-items: flex-end;
+    width: 50% ;
+}
+.imgclass1{
+    align-items: flex-end;
+    width: 50% ;
+    margin-left: 15px;
+}
+.imgclass2{
+    margin-left: 65px;
+    align-items: flex-end;
+    width: 50% ;
+}
+.card2 {
+  /* Add shadows to create the "card" effect */
+  margin-top: 30px;
+  background-color: #D18575;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 0 auto; /* centers the card horizontally */
+  width: 1200px;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,4 @@
+{
+    "db":"mongodb+srv://zafar:zafar@cluster0.emfu5bh.mongodb.net/apiprac",
+    "jwtPrivatekey":"SomePrivateKey"
+}

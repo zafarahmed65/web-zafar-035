@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Records</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4 mb-4">Student Records</h1>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>CGPA</th>
+          <th>Skills</th>
+          <th>Address</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach((student) => { %>
+          <tr>
+            <td><%= student.name %></td>
+            <td><%= student.cgpa %></td>
+            <td><%= student.skills.join(', ') %></td>
+            <td><%= student.address %></td>
+            <td>
+              <form method="POST" action="/delete/<%= student._id %>">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <a class="btn btn-primary" href="/add">Add New Student</a>
+  </div>
+
+  <!-- Add Bootstrap JS (optional, if you need JavaScript functionality) -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

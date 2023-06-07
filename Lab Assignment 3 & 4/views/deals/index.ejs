@@ -1,0 +1,90 @@
+<div class="my-container">
+  <% for(let index = 0; index < services.length; index++) { %>
+  <div class="my-product-card">
+    <img src="assets/zafar.png" alt="Product Image" class="my-product-image">
+    <h2 class="my-product-title"><%= services[index].name %></h2>
+    <div class="my-product-price">PKR <%= services[index].price %></div>
+    <button class="my-btn my-btn-secondary" onclick="toggleDescription(<%= index %>)">View Details</button>
+    <a href="/deals/add-to-cart/<%= services[index]._id %>" class="my-btn my-btn-secondary">Add To Cart</a>
+    <div id="my-description_<%= index %>" class="my-product-description" style="display: none;"><%= services[index].description %></div>
+  </div>
+  <% } %>
+</div>
+
+<style>
+.my-container {
+    margin-top: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.my-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.my-product-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.my-product-image {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.my-product-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.my-product-price {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.my-product-description {
+  margin-top: 10px;
+}
+
+.my-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.my-btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+</style>
+
+<script>
+function toggleDescription(index) {
+  const description = document.getElementById(`my-description_${index}`);
+  if (description.style.display === "none") {
+    description.style.display = "block";
+  } else {
+    description.style.display = "none";
+  }
+}
+</script>

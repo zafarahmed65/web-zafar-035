@@ -1,4 +1,2 @@
 #Zafar Portfolio
-
-Lab assignment no 3 and 4 both are implemented in my Semester Project
-
+Web Technologies Final Term Project in which all the Assignments 1 - 4 and all the lab Assignments 1 - 4 are covered and completed

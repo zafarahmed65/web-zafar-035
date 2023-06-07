@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/about-css.css" />
+  <script src="/script/formValidation.js"></script>
+
+</head>
+<style>
+  input[type=text] {
+
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    width: 350px
+  }
+
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+</style>
+
+<body style="background-color: black;">
+  <% -body %>
+  <header class="head">
+    <nav class="navbar" >
+      <div class="image-container">
+        <img src="assets/logo-removebg-preview.png" width="20%" style="z-index: 1;" />
+        
+        <ul >
+          <li><a href="#section3">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#section2">Work</a></li>
+          <% if (user) { %>
+            <li><a href="/deals">Service</a></li>
+          <% }
+          else { %>
+            <li><a href="/services">Service</a></li>
+ <% } %>
+          
+          <li><a href="#section4">About</a></li>
+          <li><a href="/">Home</a></li>
+
+          <% if (user) { %>
+            <li >
+              <a  href="/profile">Profile </a>
+            </li>
+              <li >
+              <a  href="/admin-profile">Admin Profile </a>
+            </li>
+            <li >
+              <a  href="/logout">Logout <%= user.name %> </a>
+            </li>
+          <% } else { %>
+            <li >
+              <a  href="/login">Login</a>
+            </li>
+            <li >
+              <a  href="/register">Register</a>
+            </li>
+                 
+          <% } %>
+
+        </ul>
+    </nav>
+  </header>
+
+  <div >
+        <% if (flash) { %>
+          <div style=" margin-top: 100px ;display: block; background-color: green; color:black"<%-flash.type%>">
+            <%= flash.message %>
+          </div>
+        <% } %>
+    </div>
+  <%- body %>
+  
+
+  <div id="section3" class="contactus">
+    <h1 class="services">Contact us</h1>
+    <p class="pservices">Now you can leave comments and feedback</p>
+  </div>
+
+
+  <div class="card">
+    <div class="left-half">
+      <form name="myForm" onsubmit="return(validate());">
+        <div class="input-group">
+          <span class="input-label">Name:</span>
+          <input style="width: 110%;" class="input-field" type="text" name="Name" placeholder="Enter your name" value="Zafar">
+        </div>
+
+        <div class="input-group">
+          <span class="input-label">Email:</span>
+          <input style="width: 110%;" class="input-field" type="text" name="Email" placeholder="Enter your email" value="zafar@gmail.com">
+        </div>
+
+        <div class="input-group">
+          <span class="input-label">Subject:</span>
+          <input style="width: 110%;" class="input-field" type="text" name="Subject" placeholder="Enter the subject" value="feedback">
+        </div>
+
+        <div class="input-group">
+          <span class="input-label">Message:</span>
+          <input style="width: 110%; height: 100px;" class="input-field" type="text" name="Message" placeholder="Enter your message" value="Very good service"></input>
+        </div>
+
+
+        <!-- <button  type="submit" id="sendButton">Send</button> -->
+       <% if (user) { %>
+  <a class="nav-link" href="/">Submit</a>
+<% } else { %>
+  <a class="nav-link" href="/login">You need to be Logged in first! </a>
+<% } %>
+
+        
+      </form>
+    </div>
+
+    
+    
+
+
+    <div class="right-half">
+      <div class="basic-info">
+        <h1>Get in Touch</h1>
+        <p>
+          If you have any questions, comments, or suggestions, please don't hesitate to get in touch with us.
+          We always welcome feedback from our customers and visitors, and we're committed to providing excellent
+          customer
+          service.
+          Whether you prefer to call us, send us an email, or fill out a contact form on our website, we'll do our best
+          to
+          respond
+          to your inquiry as quickly and thoroughly as possible. We understand that communication is key to building
+          strong relationships,
+          and we value your input.
+        </p>
+        <img src="assets/home.png" width=5% style="margin-top: 58%;">
+        <p style="margin-top: 25.2%; margin-left: 40px;">1046 E-1 Johar Town Lahore</p>
+
+        <img src="assets/email.png" width="4.5%" style="margin-top: 17px; margin-left: 2px;">
+        <p style="margin-top: 29%; margin-left: 40px;">zafar.ahmed2k17@gmail.com</p>
+
+        <img src="assets/phone-call.png" width="4.5%" style="margin-top: 17px; margin-left: 2px;">
+        <p style="margin-top: 32.7%; margin-left: 40px;">+92-3201416687</p>
+      </div>
+    </div>
+  </div>
+
+        
+
+</body>
+
+
+</html>

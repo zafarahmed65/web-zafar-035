@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Services</title>
+  <style>
+    .service-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 110px;
+    }
+    .service-card {
+      width: calc(33.33% - 10px);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card-image {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .service-card-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    .service-card-title {
+      margin-top:0;
+      font-size: 35px;
+      color: #b60606;
+      text-align: center;
+      font-weight: bold;
+    }
+    .service-card-details {
+      margin-bottom: 0;
+      color: #ffffff;
+    }
+    .service-card-price {
+      font-size: 20px;
+            text-align: center;
+
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .service-card-description {
+      font-size: 16px;
+      color: #ffffff;
+    }
+    .login-button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .login-button:hover {
+      background-color: #45a049;
+    }
+    .service-card-add-to-cart {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .centered {
+      margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+    <% if (user) { %>
+      .service-card:hover .service-card-add-to-cart {
+        display: block;
+      }
+    <% } %>
+  </style>
+</head>
+<body>  
+ <% if (!user) { %>
+  <div class="centered">
+    <div class="login-button">
+      <a href="/login">Want to purchase something? Log in!</a>
+    </div>
+  </div>
+<% } %>
+
+  <% if (services.length === 0) { %>
+    <p>No services found.</p>
+  <% } else { %>
+    <div class="service-card-container">
+      <% services.forEach(function(service) { %>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src=" assets/zafar1.png " alt="<%= service.name %> Image">
+          </div>
+          <div>
+            <h2 class="service-card-title"><%= service.name %></h2>
+            <p class="service-card-price">Price: $<%= service.price %></p>
+            <p class="service-card-description"><%= service.description %></p>
+          </div>
+          <% if (user) { %>
+            <div class="service-card-add-to-cart">
+              <button>Add to Cart</button>
+            </div>
+          <% } %>
+        </div>
+      <% }); %>
+    </div>
+  <% } %>
+</body>
+</html>
